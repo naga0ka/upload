@@ -1,0 +1,65 @@
+flagrow-upload:
+    forum:
+        buttons:
+            attach: 添付
+        states:
+            loading: Loading
+            success: 成功
+            error: エラー
+    admin:
+        permissions:
+            upload_label: Upload files
+        upload_methods:
+            local: Local
+            aws-s3: Amazon S3
+            imgur: Imgur
+            ovh-svfs: OVH SVFS
+        labels:
+            preferences:
+                title: 一般設定
+                max_file_size: 最大アップロードサイズ (キロbyte)
+                mime_types: mimeを設定します。
+            resize:
+                title: 画像リサイズ
+                toggle: 画像リサイズ
+                max_width: 最大画像幅 (px)
+                max_height: 最大画像高さ (px)
+            watermark:
+                title: ウォーターマーク
+                toggle: ウォーターマーク
+                position: ウォーターマーク位置
+                file: ウォーターマーク用画像のアップロード
+            local:
+                title: Local storage settings
+                cdn_url: Content Delivery URL (prefixes files)
+            imgur:
+                title: Imgur image storage settings
+                client_id: Imgur client ID
+            aws-s3:
+                title: AWS S3 storage settings
+                key: Key
+                secret: Secret
+                bucket: Bucket
+                region: Region
+            ovh-svfs:
+                title: OVH SVFS storage settings
+                container: Container
+                tenantid: Tenant ID
+                username: Username
+                password: Password
+                region: Region
+        buttons:
+            save: 保存
+        help_texts:
+            description: >
+                ファイルアップロードに関する設定をおこないます。
+            mime_types: >
+                ここであなたのマッピングを設定してください。各MIMEタイプの正規表現は、
+                特定のアップロード・アダプターによって処理されます。
+            resize: >
+                アップロード時にリサイズするか選択できます。
+                高さか幅を指定できます。
+                サイズ変更プロセスは、画像のアスペクト比を維持します。
+            watermark: >
+                アップロード時に画像にウォーターマークを追加するか選択できます。
+                以下の設定に基づいて、非GIF形式のウォーターマークが追加されます。
